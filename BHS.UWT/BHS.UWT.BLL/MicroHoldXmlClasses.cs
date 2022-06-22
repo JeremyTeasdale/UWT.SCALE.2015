@@ -53,6 +53,11 @@ namespace BHS.UWT.BLL
 
         [XmlElement("Details")]
         public Details details { get; set; }
+
+        [XmlElement]
+        public string Lpn { get; set; }
+        [XmlElement]
+        public string StsCode { get; set; }
     }
 
     [XmlRoot("Details"), Serializable]

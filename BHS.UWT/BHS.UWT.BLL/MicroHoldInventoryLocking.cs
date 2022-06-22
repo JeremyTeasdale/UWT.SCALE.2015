@@ -67,6 +67,7 @@ namespace BHS.UWT.BLL
                     foreach (FileInfo fileInfo in FindAndLockMicroholdFiles())
                     {
                         ProcessFile(fileInfo, dataHelper);
+                        SetFileAsProcessed(fileInfo.FullName, Path.Combine(OutputFolder, fileInfo.Name));
                     }
 
                     dataHelper.Update(CommandType.StoredProcedure, "BHS_MicroHold_UpdateInventoryWithCache");
@@ -110,6 +111,34 @@ namespace BHS.UWT.BLL
             uwt867Message = (UWT867Message)serializer.Deserialize(loadStream);
             loadStream.Close();
 
+            if (!string.IsNullOrEmpty(uwt867Message.Lpn) && string.IsNullOrEmpty(uwt867Message.StsCode))
+            {
+                Exception ex = UwtDebugger.BuildException(
+                    "File Contained a status code but no LPN",
+                    new List<string> {
+                        string.Format("file name = {0}", fileInfo.Name),
+                        string.Format("LPN = '{0}'", uwt867Message.Lpn),
+                        string.Format("status code= '{0}'", uwt867Message.StsCode)
+                    }
+                );
+                UwtDebugger.WriteToAuditLog(ex, LocalSession);
+                return;
+            }
+            if (string.IsNullOrEmpty(uwt867Message.Lpn) && !string.IsNullOrEmpty(uwt867Message.StsCode))
+            {
+                Exception ex = UwtDebugger.BuildException(
+                    "File Contained an LPN but no status code",
+                    new List<string> {
+                        string.Format("file name = {0}", fileInfo.Name),
+                        string.Format("LPN = '{0}'", uwt867Message.Lpn),
+                        string.Format("status code= '{0}'", uwt867Message.StsCode)
+                    }
+                );
+                UwtDebugger.WriteToAuditLog(ex, LocalSession);
+                return;
+
+            }
+
             IDataParameter[] paramArray = new IDataParameter[6];
             string lot = uwt867Message.Lot;
             string po = uwt867Message.ReferenceID;
@@ -122,20 +151,28 @@ namespace BHS.UWT.BLL
                 string poLine = "";
                 i++;
 
-                paramArray[0] = dataHelper.BuildParameter("@ITEM", item);
-                paramArray[1] = dataHelper.BuildParameter("@LOT", lot);
-                paramArray[2] = dataHelper.BuildParameter("@PO", po);
-                paramArray[3] = dataHelper.BuildParameter("@POLINE", poLine);
-                paramArray[4] = dataHelper.BuildParameter("@TRANSTYPE", transType);
-                paramArray[5] = dataHelper.BuildParameter("@FILENAME", fileInfo.Name);
+                //paramArray[0] = dataHelper.BuildParameter("@ITEM", item);
+                //paramArray[1] = dataHelper.BuildParameter("@LOT", lot);
+                //paramArray[2] = dataHelper.BuildParameter("@PO", po);
+                //paramArray[3] = dataHelper.BuildParameter("@POLINE", poLine);
+                //paramArray[4] = dataHelper.BuildParameter("@TRANSTYPE", transType);
+                //paramArray[5] = dataHelper.BuildParameter("@FILENAME", fileInfo.Name);
 
                 Debug.WriteLine(string.Format("BHS.UWT.BLL.MicroHoldInventoryLocking: File {0} running stored proc 'BHS_MicroHold_PopulateCache {1}, {2}, {3}, {4}, {5}, {0}'", fileInfo.Name, item, lot, po, poLine, transType));
-                dataHelper.Update(CommandType.StoredProcedure, "BHS_MicroHold_PopulateCache", paramArray);
+                //dataHelper.Update(CommandType.StoredProcedure, "BHS_MicroHold_PopulateCache", paramArray)
+                dataHelper.Update(CommandType.StoredProcedure, "BHS_MicroHold_PopulateCache",
+                    dataHelper.BuildParameter("@ITEM", item),
+                    dataHelper.BuildParameter("@LOT", lot),
+                    dataHelper.BuildParameter("@PO", po),
+                    dataHelper.BuildParameter("@POLINE", poLine),
+                    dataHelper.BuildParameter("@TRANSTYPE", transType),
+                    dataHelper.BuildParameter("@FILENAME", fileInfo.Name),
+                    dataHelper.BuildParameter("@LPN", uwt867Message.Lpn),
+                    dataHelper.BuildParameter("@StsCode", uwt867Message.StsCode)
+                    ); ;
             }
 
             //WriteProcessHistory("130", "100", string.Format("file name = {0}", fileInfo.Name), "", "", "", string.Format("Microhold file {0}.", fileInfo.Name), "BHS_MicroHold", "ILSSRV", LocalSession.DefaultWarehouse);
-
-            SetFileAsProcessed(fileInfo.FullName, Path.Combine(OutputFolder, fileInfo.Name));
         }
 
         public FileInfo ChangeExtension(string sourceFileName, string newExtension)
