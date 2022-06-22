@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24F73DDF-005B-46D4-A582-AD1BE42BEE38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BHS.UWT.BLL</RootNamespace>
+    <AssemblyName>BHS.UWT.BLL</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>BHS.SNK</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BHS.ProcessService, Version=3.5.0.0, Culture=neutral, PublicKeyToken=11032c215c2193f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>BHS Service Files\BHS.ProcessService.dll</HintPath>
+    </Reference>
+    <Reference Include="DAO.Interfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\DAO.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityBroker, Version=2004.0.0.67, Culture=neutral, PublicKeyToken=b654f6feb1f1c2e3">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\EntityBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="ILS.NHibernate">
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\ILS.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="ILS.NHibernate.Entities, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\ILS.NHibernate.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="ILS.NHibernate.Interfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\ILS.NHibernate.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Manh.WMFW.Entities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\Manh.WMFW.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility.Interfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\Utility.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.Configs, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.Configs.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.DataAccess, Version=12.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.General">
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.General.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.General.BL">
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Server\WMW.General.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.General.Interfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.General.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.DataAccess, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.JSharp.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.DataAccess.DO, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.JSharp.DataAccess.DO.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.General, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.JSharp.General.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.General.RF, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\RF\bin\WMW.JSharp.General.RF.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.Receiving.RF, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\RF\bin\WMW.JSharp.Receiving.RF.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.JSharp.Shipping.BL, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Server\WMW.JSharp.Shipping.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.Shipping.BL, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Server\WMW.Shipping.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.Shipping.Interfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Manhattan Associates\ILS\2015\Common\WMW.Shipping.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="WMW.Utility.BL, Version=12.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Manhattan Associates\ILS\2015\Server\WMW.Utility.BL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloseContainerUIEP.cs" />
+    <Compile Include="ContainerHldr.cs" />
+    <Compile Include="CloseContainerAfterEP.cs" />
+    <Compile Include="DoNotSplitItems.cs" />
+    <Compile Include="GenericExitPoint.cs" />
+    <Compile Include="MicroHoldParsingValues.cs" />
+    <Compile Include="MicroHoldTrans.cs" />
+    <Compile Include="MicroHoldTransDetail.cs" />
+    <Compile Include="ManifestEP.cs" />
+    <Compile Include="MicroHoldInventoryLocking.cs" />
+    <Compile Include="MicroHoldTransType.cs" />
+    <Compile Include="MicroHoldXmlClasses.cs" />
+    <Compile Include="FedexFreightCheckDigitMod.cs" />
+    <Compile Include="OldDominionCheckDigitMod10.cs" />
+    <Compile Include="PalletHldr.cs" />
+    <Compile Include="ReplenishmentLotOverride.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadFileSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BHS.SNK" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

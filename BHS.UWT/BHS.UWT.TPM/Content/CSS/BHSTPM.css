@@ -1,0 +1,330 @@
+﻿/* B6AF6B */
+html, body
+{
+    font-family: "Trebuchet MS" , Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+#wrapper
+{
+    margin: 0 auto;
+    width: 912px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+h1
+{
+    font-size: 28px;
+    padding: 0px;
+    margin: 0px;
+}
+h2
+{
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px;
+}
+h3
+{
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#header
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+#header img
+{
+    border: 1px solid #999;
+}
+
+#msm-header
+{
+    clear: both;
+    text-align: center;
+}
+
+#date-wrap
+{
+    margin: 0 auto;
+}
+
+#date-entry-req-wrap
+{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    width: 380px;
+    margin-top: 10px;
+}
+
+#date-entry-req
+{
+    margin-top: 5px;
+    text-align: left;
+    background-color: #fff8dd;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid #999;
+    margin-bottom: 3px;
+}
+
+#verify-order-msg
+{
+    color: #CC0000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#order-success-wrap
+{
+    padding: 10px;
+    background-color: #DFF2BF;
+    border: 1px solid #4F8A10;
+}
+
+#order-success
+{
+    color: #348017;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content-section
+{
+    color: #333;
+    padding: 10px;
+    border: 1px solid #999;
+    background: #eee;
+    width: 890px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.content-section img
+{
+    position: relative;
+    top: 3px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.data-table table
+{
+}
+
+.data-table table th, td
+{
+    vertical-align: middle;
+}
+
+.form-label
+{
+    font-weight: bold;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 22px;
+}
+
+.form-label-title
+{
+    font-weight: bold;
+    font-size: 15px;
+    color: #183D57;
+}
+
+input[type=text]
+{
+    padding: 3px;
+    color: #333;
+    border: 1px solid #999;
+    width: 150px;
+}
+
+.ReturnInput
+{
+    background-color: #eee;
+    padding: 1px;
+    color: #333;
+    border: 2px solid #999;
+}
+
+.ActionInput
+{
+    background-color: #454545;
+    padding: 1px;
+    color: #fff;
+    border: 2px solid #999;
+    width: 80px;
+}
+
+#content
+{
+    width: 800px;
+    color: #333;
+    border: 1px solid #ccc;
+    background: #F2F2E6;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    height: 350px;
+}
+
+#footer
+{
+    width: 800px;
+    color: #333;
+    border: 1px solid #ccc;
+    background: #BD9C8C;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+#ShipmentList
+{
+    margin: 0 auto;
+}
+
+#ShipmentList table
+{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#ShipmentList table th
+{
+    font-family: Arial, Tahoma, Sans-Serif;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 6px 6px 6px 12px;
+    background-color: #999;
+}
+
+#ShipmentList table td
+{
+    padding: 6px 6px 6px 12px;
+    color: #333;
+}
+
+.altrow
+{
+    background: #E2E2E2;
+}
+
+.cart-table
+{
+    border-collapse: collapse;
+}
+
+.cart-table th
+{
+    padding: 6px 6px 6px 8px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #999;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.cart-table td
+{
+    padding: 6px 6px 6px 8px;
+}
+.cart-table td img
+{
+    cursor: pointer;
+}
+
+.cart-table .alt-row
+{
+    background-color: #eee;
+}
+
+#cart
+{
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+#OrderTOS
+{
+    position: relative;
+    float: left;
+    left: -35px;
+}
+
+#OrderTOS li.tos
+{
+    list-style-type: square;
+    margin-left: 22px;
+}
+
+#OrderTOS li.info
+{
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.item-success
+{
+    border: 1px solid #4F8A10;
+    padding: 5px 5px 5px 48px;
+    background-image: url('../images/icons/valid32x32.png');
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #DFF2BF;
+}
+
+.item-error
+{
+    border: 1px solid #D8000C;
+    padding: 5px 5px 5px 48px;
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../images/icons/delete.png');
+}
+
+#item-success-outer
+{
+    clear: both;
+    height: 22px;
+}
+
+.more-than-available
+{
+    background-color: #A52A2A;
+    color: #ffffff;
+}
+
+.validator
+{
+    color: #CC0000;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}

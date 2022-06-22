@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 26.875" name="ILSDB">
+  <DataContextMoniker Name="/ILSDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0feefc6d-b4f5-4b09-a3fd-f4adbdd11800" absoluteBounds="5.5, 0.5, 2, 26.076947428385417">
+      <DataClassMoniker Name="/ILSDBDataContext/SHIPMENT_HEADER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84bd4b42-4c7a-400e-b373-7085368d728f" absoluteBounds="5.515, 0.96, 1.9700000000000002, 25.516947428385414" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc9c167b-6d5b-446b-9d76-cf4cf4b29a67" absoluteBounds="3.375, 0.5, 2, 3.8900577799479166">
+      <DataClassMoniker Name="/ILSDBDataContext/SYSTEM_CONFIG_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3d2cca0-bb2d-4729-94d4-8a954515fa83" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="255e6c91-b09b-4096-bea1-f3f63fd203f1" absoluteBounds="9.75, 0.5, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ILSDBDataContext/WEB_USER_COMPANY_ASSIGNMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ea66dc2-6ae3-4bb9-a8d7-7f15b46778f2" absoluteBounds="9.765, 0.96, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63e3e7fd-a3d0-496f-b74f-428c3703081b" absoluteBounds="7.625, 0.5, 2, 5.3691837565104157">
+      <DataClassMoniker Name="/ILSDBDataContext/WEB_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d16b39ae-27f5-4acd-a2c9-9070bcec4026" absoluteBounds="7.6400000000000006, 0.96, 1.9700000000000002, 4.8091837565104161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.625 : 1.95198689778646); (9.75 : 1.95198689778646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ILSDBDataContext/WEB_USER/WEB_USER_WEB_USER_COMPANY_ASSIGNMENT" />
+      <nodes>
+        <classShapeMoniker Id="63e3e7fd-a3d0-496f-b74f-428c3703081b" />
+        <classShapeMoniker Id="255e6c91-b09b-4096-bea1-f3f63fd203f1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

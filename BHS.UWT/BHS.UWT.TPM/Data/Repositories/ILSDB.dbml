@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="ILS" Class="ILSDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=ILS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ILSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SHIPMENT_HEADER" Member="SHIPMENT_HEADERs">
+    <Type Name="SHIPMENT_HEADER">
+      <Column Name="INTERNAL_SHIPMENT_NUM" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="warehouse" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPPING_LOAD_NUM" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="SHIPMENT_ID" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="LAUNCH_STEP" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TRAILING_STS" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TRAILING_STS_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TRAILING_STS_FAILED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_TYPE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CONSOLIDATED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="LEADING_STS" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="LEADING_STS_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARRIER" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="LEADING_STS_FAILED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COMPANY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CARRIER_SERVICE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CARRIER_GROUP" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CARRIER_TYPE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FREIGHT_TERMS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LIABILITY_TERMS" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SHIP_TO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ROUTE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="STOP" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SHIP_TO_ADDRESS1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_ADDRESS2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_ADDRESS3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SHIP_TO_STATE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SHIP_TO_COUNTRY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SHIP_TO_POSTAL_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SHIP_TO_PHONE_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_FAX_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ADDRESS1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LAUNCH_NUM" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="WEIGHT_UM" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="VOLUME_UM" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ROUTING_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SINGLE_ITEM_CARTONS" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="USER_DEF1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PRIORITY" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="USER_DEF3" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF4" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF5" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF6" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF7" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="MANUALLY_ENTERED" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="USER_DEF8" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_STAMP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PROCESS_STAMP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DATE_TIME_STAMP" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BOL_NUM_ALPHA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PRO_NUM_ALPHA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ADDRESS3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ADDRESS2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ATTENTION_TO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CUSTOMER_STATE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_COUNTRY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_POSTAL_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_PHONE_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_FAX_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_ATTENTION_TO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHIP_TO_EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REQUESTED_DELIVERY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REQUESTED_DELIVERY_TYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SCHEDULED_SHIP_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PLANNED_SHIP_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACTUAL_SHIP_DATE_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PLANNED_DELIVERY_DATE_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACTUAL_DELIVERY_DATE_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="QUANTITY_UM" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TOTAL_FREIGHT_CHARGE" Type="System.Decimal" DbType="Decimal(28,5)" CanBeNull="true" />
+      <Column Name="BASE_FREIGHT_CHARGE" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="FREIGHT_DISCOUNT" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="ACCESSORIAL_CHARGE" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="CONSOLIDATION_ALLOWED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="INTERMEDIATE_CONSIGNEE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_ADDRESS1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_ADDRESS2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_ADDRESS3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_ATTENTION_TO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_STATE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_COUNTRY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_POSTAL_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_PHONE_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_FAX_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERMEDIATE_EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_ADDRESS1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_ADDRESS2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_ADDRESS3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_ATTENTION_TO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_STATE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_COUNTRY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_POSTAL_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_PHONE_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_FAX_NUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREIGHT_BILL_TO_EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ERP_ORDER" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="INTERNAL_ORDER_NUM" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="EXPORT_TAX_ID" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PARTIES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LOADING_PIER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TRANSPORTATION_MODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="EXPORT_PORT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNLOADING_PORT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTAINERIZED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FTZ" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="VALIDATED_LICENSE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LICENSE_EXP_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ECCN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AUTHORIZED_EMPL_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AUTHORIZED_EMPL_TITLE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPLOAD_INTERFACE_BATCH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_RESIDENTIAL_FLAG" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="SHIPTO_RESIDENTIAL_FLAG" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="REJECTION_NOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INTERFACE_RECORD_ID" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY9" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CATEGORY10" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONSOLIDATION_DOCK_LOC_AREA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CONSOLIDATION_DOCK_LOC_POS" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PROCESS_TYPE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CREATION_PROCESS_STAMP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATION_DATE_TIME_STAMP" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IMMEDIATE_NEEDS_NOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALLOCATE_COMPLETE" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALTERNATE_EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STOP_SEQUENCE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="INTERNAL_CARRIER_NUM" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="STORE_DISTRIBUTION" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TOTAL_LBR_ESTIMATE" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="WEIGHT_ENTERED" Type="System.Decimal" DbType="Decimal(28,5)" CanBeNull="true" />
+      <Column Name="VOLUME_ENTERED" Type="System.Decimal" DbType="Decimal(28,5)" CanBeNull="true" />
+      <Column Name="VALUE_ENTERED" Type="System.Decimal" DbType="Decimal(28,5)" CanBeNull="true" />
+      <Column Name="LOCKED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPPER_CODE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYSTEM_CONFIG_DETAIL" Member="SYSTEM_CONFIG_DETAILs">
+    <Type Name="SYSTEM_CONFIG_DETAIL">
+      <Column Name="OBJECT_ID" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SYS_KEY" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SYSTEM_VALUE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RECORD_TYPE" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="LOOKUP_KEY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SYSTEM_CREATED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_DEF1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF3" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF4" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF5" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF6" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF7" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_DEF8" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_STAMP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PROCESS_STAMP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DATE_TIME_STAMP" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VALUE_REQUIRED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WEB_USER_COMPANY_ASSIGNMENT" Member="WEB_USER_COMPANY_ASSIGNMENTs">
+    <Type Name="WEB_USER_COMPANY_ASSIGNMENT">
+      <Column Name="COMPANY" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WEB_USER" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USER_DEF1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF3" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF4" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF5" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF6" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF7" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_DEF8" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_STAMP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PROCESS_STAMP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DATE_TIME_STAMP" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="WEB_USER_WEB_USER_COMPANY_ASSIGNMENT" Member="WEB_USER1" ThisKey="WEB_USER" OtherKey="WEB_USER1" Type="WEB_USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WEB_USER" Member="WEB_USERs">
+    <Type Name="WEB_USER">
+      <Column Name="WEB_USER" Member="WEB_USER1" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="USER_TYPE" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_AUTH" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="COMPANY_AUTH" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="MARQUEE_MSG" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="USER_DEF1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF3" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF4" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF5" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF6" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="USER_DEF7" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_DEF8" Type="System.Decimal" DbType="Decimal(19,5)" CanBeNull="true" />
+      <Column Name="USER_STAMP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PROCESS_STAMP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DATE_TIME_STAMP" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMER" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="COMPANY" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CUSTOMER_GROUP" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="VENDOR" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="DEFAULT_LANGUAGE" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIP_TO_SELECT_AUTH" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ORDER_PROCESSING" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEM_SELECTION_AUTH" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="AVAILABILITY_CHECKING" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLICKWRAP_ACCEPTED" Type="System.Char" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="WEB_USER_WEB_USER_COMPANY_ASSIGNMENT" Member="WEB_USER_COMPANY_ASSIGNMENTs" ThisKey="WEB_USER1" OtherKey="WEB_USER" Type="WEB_USER_COMPANY_ASSIGNMENT" />
+    </Type>
+  </Table>
+  <Function Name="dbo.BHS_TPM_ShipmentSearch" Method="BHS_TPM_ShipmentSearch">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="ShipmentID" Parameter="shipmentID" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="BOLNumber" Parameter="bOLNumber" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="ScheduledShipDate" Parameter="scheduledShipDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="BHS_TPM_ShipmentSearchResult">
+      <Column Name="SHIPMENT_ID" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_DEF1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SCHEDULED_SHIP_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BOL_NUM_ALPHA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,106 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="MANHRF.master.cs" Inherits="BHS.UWT.WEB.MANHRF"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>JJ Taylor</title>
+    <link type="text/css" rel="stylesheet" href="<%=Session["BHSCSS"]%>" />
+    <!-- <script src="JS/jquery-1.4.2.min.js" type="text/javascript"></script> -->
+    <script src="Content/JS/jquery-1.4.2.min.js" type="text/javascript"></script>
+   
+    <script language="javascript" type="text/javascript">
+ 
+        var iNumOfSubmits = 0;
+        function Click() {
+            if (iNumOfSubmits > 0)
+                return false;
+            else 
+            {
+                iNumOfSubmits++; 
+                FORM1.action = strfunction;
+                submitForm();
+            }
+            return true;
+        }
+        
+        function isNumeric(stValue)
+        {
+	        var valid = "0123456789";
+
+	        for(var i=0; i < stValue.length; i++)
+	        {
+		        if(valid.indexOf(stValue.substring(i,i+1)) == -1)
+			        return false;
+	        }
+
+	        return true;
+        }
+
+
+        function trim(stInput)
+        {
+	        while(stInput.length > 0 && ''+stInput.charAt(stInput.length-1)==' ')
+		        stInput=stInput.substring(0,stInput.length-1);
+	        while(stInput.length > 0 && ''+stInput.charAt(0)==' ')
+		        stInput=stInput.substring(1,stInput.length);
+	        return stInput;
+        }
+
+        function backButtonAccess()
+        {
+	        if(window.event.srcElement.name == window.document.name
+	           || window.event.srcElement.id == "combobox_id"
+	           || window.event.srcElement.type == "checkbox"
+	           || window.event.srcElement.type == "radio"
+	           || window.event.srcElement.type == "image"
+	           || window.event.srcElement.type == "submit"
+	           || window.event.srcElement.type == "button")
+		        window.event.returnValue=false;
+        }
+
+
+
+        document.oncontextmenu = function(){return false};
+
+        function showProcImg()
+        {
+	        var layerRef="document.all";
+	        var styleRef=".style";
+	        var imageRef="document.images";
+
+	        eval(layerRef + '["' + 'procImg' + '"]' + styleRef + '.visibility = "visible"');
+        }
+
+        function closeProcImg()
+        {
+	        var layerRef="document.all";
+	        var styleRef=".style";
+	        var imageRef="document.images";
+
+	        eval(layerRef + '["' + 'procImg' + '"]' + styleRef + '.visibility = "hidden"');
+        }
+    </script>
+
+</head>
+<body>
+    <center>
+        <div id="wrapper">
+    <form id="form1" runat="server">
+<%--        <div id="procImg" style="visibility: hidden; float:left; width:25px;">
+            <table width="100%">
+                <tr align="left" ><td><img src="images/rfManhMtn.gif" alt="BHS" width="25px" id="imgManh" visible="false"/></td></tr>
+            </table>
+        </div>--%>
+        
+                	<div id="content">
+                     <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" >
+                            
+                        </asp:contentplaceholder>
+                    </div>
+
+    </form>            
+                </div>
+        </center>
+</body>
+</html>

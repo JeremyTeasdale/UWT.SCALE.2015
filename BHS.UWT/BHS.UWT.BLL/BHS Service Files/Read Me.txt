@@ -1,0 +1,14 @@
+1) Copy the service EXE, config, and install.bat to the ILS folder.
+
+1.1) Copy the Service DLL to the _custom folder and add it to the GAC
+
+2) Edit the bat file to user the correct folder path (2009, 2010, 2011 etc)
+
+3) edit the config file as needed.
+
+4) run the batch file
+
+5) Confirm the service was succesfully installed.
+
+6) (optional) delete the batch file
+

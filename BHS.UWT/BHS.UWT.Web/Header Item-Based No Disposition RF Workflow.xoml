@@ -1,0 +1,14 @@
+<SequentialWorkflowActivity x:Class="Workflow.HeaderItem" x:Name="HeaderItem" xmlns:ns0="clr-namespace:ILSActivityLibrary;Assembly=ILSActivityLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a978a715ccadf176" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<ns0:ILSRFReceivingActivity PageIdentifier="ReceiptID" x:Name="ReceiptID" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="ReceiptSelection" x:Name="ReceiptSelection" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="Item" x:Name="Item" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="ItemInfo" x:Name="ItemInfo" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="ItemDimensionVerification" x:Name="ItemDimensionVerification" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="CheckIn" x:Name="CheckIn" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="InboundQC" x:Name="InboundQC" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="CreateReceiptContainers" x:Name="CreateReceiptContainers" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="Container" x:Name="Container" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="LotEntry" x:Name="LotEntry" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="SpecialInfo" x:Name="SpecialInfo" />
+	<ns0:ILSRFReceivingActivity PageIdentifier="ReceivingLotSignature" x:Name="ReceivingLotSignature" />
+</SequentialWorkflowActivity>
